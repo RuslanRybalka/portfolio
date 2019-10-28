@@ -85,9 +85,13 @@ body{
 .portfolio__item_title, 
 .portfolio__item_description{
     display: block;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
     color: white;
+    transition: 0.2s;
+}
+.portfolio__item_title:hover{
+    color: rgb(199, 199, 199);
 }
 
 .portfolio__item_description{
@@ -96,9 +100,10 @@ body{
     margin-bottom: 30px;
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 768px){
     body{
         flex-direction: column;
+        padding: 20px;
     }
     .portfolio-menu{
        max-height: 10%;

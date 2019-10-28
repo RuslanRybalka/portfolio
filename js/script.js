@@ -40,7 +40,9 @@ window.onload = function(e){
             }
         }
     });
+    let touch = {x:0,y: 0}
     document.addEventListener('touchstart', function(event) {
+        touch.x = event.targetTouches[0].clientX;
         let target = event.target;
         let portfolioItem = document.querySelector('.display-portfolio-item');
         if(target.classList.contains('portfolio__menu_item')){
@@ -55,10 +57,7 @@ window.onload = function(e){
             }
         }
     });
-    let touch = {x:0,y: 0}
-    document.addEventListener('touchstart', function(event){
-        touch.x = event.targetTouches[0].clientX;
-    });
+    
     document.addEventListener('touchend', function(event){
 
         let diff = touch.x - event.targetTouches[0].clientX;
@@ -70,7 +69,10 @@ window.onload = function(e){
             let index = (Number(active.dataset.index) + 1) % menuItems.length;  
             active.classList.remove('active');          
             active.classList.add('blur');
+            visible.classList.remove('display-portfolio-item');
             active = menuItems[index];
+            visible = portfolioItems[index];
+            visible.classList.add('display-portfolio-item');
             active.classList.remove('blur');
             active.classList.add('active');
         }else if( diff < 0 && diff < -100){
@@ -82,7 +84,10 @@ window.onload = function(e){
             }       
             active.classList.remove('active');
             active.classList.add('blur');
+            visible.classList.remove('display-portfolio-item');
             active = menuItems[index];
+            visible = portfolioItems[index];
+            visible.classList.add('display-portfolio-item');
             active.classList.remove('blur');
             active.classList.add('active');
         }        
