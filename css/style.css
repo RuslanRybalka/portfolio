@@ -100,7 +100,7 @@ body{
     margin-bottom: 30px;
 }
 
-@media screen and (max-width:800px){
+@media all and (max-width:640px){
     body{
         flex-direction: column;
         padding: 20px;
