@@ -37,7 +37,7 @@ window.addEventListener('touchstart', function(event){
 window.addEventListener('touchend', function(event){
     console.log(touch.x, event.changedTouches[0].clientX);
     console.log(touch.y, event.changedTouches[0].clientY);
-    if ((Math.abs(touch.x - event.changedTouches[0].clientX) > 10)  || (Math.abs(touch.Y - event.changedTouches[0].clientY) > 10)){
+    if ((Math.abs(touch.x - event.changedTouches[0].clientX) > 10)  || (Math.abs(touch.y - event.changedTouches[0].clientY) > 10)){
         return false;
     }
     let delBtn = document.querySelector('.delete-btn');
