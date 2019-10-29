@@ -26,7 +26,7 @@ window.addEventListener('keypress', function (event){
         startTimer();        
     }
 });
-window.addEventListener('touchstart', function(event){
+window.addEventListener('touchend', function(event){
     let delBtn = document.querySelector('.delete-btn');
     if(!delBtn || event.target !== delBtn) 
         startTimer();
