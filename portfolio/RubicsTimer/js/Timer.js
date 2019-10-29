@@ -12,7 +12,6 @@ class Timer{
     start(){
         this.isStarted = true;
         this.timeStart = Date.now();
-        console.log('Timer started');
         this.run();
     }
     run(){       
@@ -25,7 +24,6 @@ class Timer{
     }
     stop(){
         clearTimeout(this.timerId);
-        console.log('STOP timer')
         this.isStarted = false;
         return this.time;
     }
