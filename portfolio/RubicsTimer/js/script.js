@@ -26,7 +26,7 @@ window.addEventListener('keypress', function (event){
         startTimer();        
     }
 });
-widndow.addEventListener('touchstart', function(event){});
+window.addEventListener('touchstart', function(event){});
 
 window.addEventListener('touchend', function(event){
     let delBtn = document.querySelector('.delete-btn');
@@ -40,9 +40,6 @@ window.addEventListener('touchend', function(event){
 
 function formatTimeField(time){
         let min = ~~(time/60000);
-        // if(min < 10){
-        //     min = '0' + min;
-        // }  
         let seconds = ~~(time/1000%60);
         if(seconds < 10){
             seconds='0' + seconds;
