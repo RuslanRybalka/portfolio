@@ -5,6 +5,7 @@ const differenceTime  = document.querySelector('.difference-time');
 const deleteBtn = document.querySelector('.delete-btn');
 const resultList = document.querySelector('.result-list');
 const timerBox = document.querySelector('.timer');
+const resetBtn = document.querySelector('.reset-btn');
 
 //<button class="delete-btn">&times;</button>
 
@@ -35,15 +36,27 @@ window.addEventListener('touchstart', function(event){
 });
 
 window.addEventListener('touchend', function(event){
-    console.log(touch.x, event.changedTouches[0].clientX);
-    console.log(touch.y, event.changedTouches[0].clientY);
+    console.log('touchend');
     if ((Math.abs(touch.x - event.changedTouches[0].clientX) > 10)  || (Math.abs(touch.y - event.changedTouches[0].clientY) > 10)){
         return false;
     }
+    if(event.target == resetBtn){
+        console.log('reset is clicked');
+        event.stopPropagation();
+        if(timer.isStarted){
+            timer.stop();
+            resetTable();
+        }else{
+            resetTable();
+        }
+        return;
+    }
     let delBtn = document.querySelector('.delete-btn');
-    if(!delBtn || event.target !== delBtn) 
-        startTimer();
-    else{
+    if(!delBtn || event.target !== delBtn){
+         startTimer();
+    }      
+    else
+    {
         event.stopPropagation();
     }
 });
@@ -137,4 +150,20 @@ function startTimer(){
         addDeleteBtn();
         setAverageTime();
     }
+}
+function resetTable(){
+    timer = new Timer(options);
+    bestResult.innerHTML = '0 : 00 : 00';
+    averageResult.innerHTML = '0 : 00 : 00';
+    differenceTime.innerHTML = '';
+    resultList.innerHTML = '';
+    document.querySelector('#timer').innerHTML = '0 : 00 : 00';
+    results = [];
+    bestTime = Infinity;
+    diffTime = 0;
+    lastTime = 0;
+    let delBtn = document.querySelector('.delete-btn');
+    if(delBtn){
+        timerBox.removeChild(delBtn);
+    }    
 }
