@@ -100,3 +100,22 @@ body{
     letter-spacing: 1px;
     margin-bottom: 30px;
 }
+@media all and (min-height: 1800px){
+    .portfolio__menu_item{
+        font-size: 64px;
+        padding:0 20px ;
+    }
+    .portfolio__item_title{
+        width: 100%;
+        font-size: 48px;
+        line-height: 1;
+        padding: 0;
+        margin: 100px 0 0 0;
+    }
+    .portfolio__item_description{
+        font-size: 32px;
+        line-height: 1.1;
+        margin-bottom: 60px;
+        text-align: left;
+    }
+}
