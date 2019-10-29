@@ -100,7 +100,7 @@ body{
     margin-bottom: 30px;
 }
 
-@media all and (max-width:640px), all and (min-resolution: 400dpi) and (max-width: 1100px){
+@media all and (max-width:640px), all and (min-resolution: 300dpi) and (max-width: 1100px) and (orientation: portrait){
     body{
         flex-direction: column;
         padding: 20px;
