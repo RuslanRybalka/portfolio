@@ -59,8 +59,7 @@ window.onload = function(e){
     });
     
     document.addEventListener('touchend', function(event){
-
-        let diff = touch.x - event.targetTouches[0].clientX;
+        let diff = touch.x - event.changedTouches[0].clientX;
         let menuItems = document.querySelectorAll('.portfolio__menu_item');
         let portfolioItems = document.querySelectorAll('.portfolio__item_wrapper');
         let active = document.querySelector('.active');
