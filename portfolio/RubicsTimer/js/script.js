@@ -22,43 +22,19 @@ let options = {
 let timer = new Timer(options);
 
 window.addEventListener('keypress', function (event){
-    console.log(event.target);
-
     if (event.keyCode == 32){
-        if(!timer.isStarted){
-            timer.start(); 
-            timer.show('#timer');
-        }
-        else{
-            timer.stop();
-            let currentTime = {
-                id : Date.now(),
-                value: timer.getTime()
-            }
-            diffTime = bestTime - currentTime.value;
-
-            if (currentTime.value < bestTime){
-                bestTime = currentTime.value;
-                setBestTime(bestTime);
-            }
-
-            results.push(currentTime.value);
-
-            if (results.length > 10){
-                results.shift();
-                renderResultList();
-            }
-            if (diffTime > 0){
-                setDiffTime(diffTime, 'better');
-            }else{
-                setDiffTime(diffTime, 'worse');
-            }
-            renderResultList();
-            addDeleteBtn();
-            setAverageTime();
-        }
+        startTimer();        
     }
 });
+window.addEventListener('touchstart', function(event){
+    let delBtn = document.querySelector('.delete-btn');
+    if(!delBtn || event.target !== delBtn) 
+        startTimer();
+    else{
+        event.stopPropagation();
+    }
+});
+
 
 function formatTimeField(time){
         let min = ~~(time/60000);
@@ -116,4 +92,39 @@ function addDeleteBtn(){
 function setAverageTime(){
     let sum = results.reduce((acc, time) => acc+time, 0)/results.length;
     averageResult.innerHTML = formatTimeField(sum);
+}
+
+function startTimer(){
+    if(!timer.isStarted){
+        timer.start(); 
+        timer.show('#timer');
+    }
+    else{
+        timer.stop();
+        let currentTime = {
+            id : Date.now(),
+            value: timer.getTime()
+        }
+        diffTime = bestTime - currentTime.value;
+
+        if (currentTime.value < bestTime){
+            bestTime = currentTime.value;
+            setBestTime(bestTime);
+        }
+
+        results.push(currentTime.value);
+
+        if (results.length > 10){
+            results.shift();
+            renderResultList();
+        }
+        if (diffTime > 0){
+            setDiffTime(diffTime, 'better');
+        }else{
+            setDiffTime(diffTime, 'worse');
+        }
+        renderResultList();
+        addDeleteBtn();
+        setAverageTime();
+    }
 }
