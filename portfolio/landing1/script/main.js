@@ -88,7 +88,8 @@ $(document).ready(function(){
 		$('.popup-close').css('display','none');
 	});
 	$('.hamburger-menu').on('click', (e)=>{
-		$('.nav-top').toggleClass('nav-top-active').focus();		
+		e.stopPropagation();
+		$('.nav-top').toggleClass('nav-top-active').focus();
 	});
 });
 
