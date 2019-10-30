@@ -11,6 +11,7 @@ const resetBtn = document.querySelector('.reset-btn');
 
 let results = [];
 let bestTime = Infinity;
+let previousBestTime = Infinity;
 let diffTime = 0;
 let lastTime = 0;
 
@@ -53,9 +54,7 @@ window.addEventListener('touchend', function(event){
     let delBtn = document.querySelector('.delete-btn');
     if(!delBtn || event.target !== delBtn){
          startTimer();
-    }      
-    else
-    {
+    }else{
         event.stopPropagation();
     }
 });
@@ -103,6 +102,11 @@ function addDeleteBtn(){
         deleteBtn.className = 'delete-btn' ;
         timerBox.appendChild(deleteBtn);
         deleteBtn.addEventListener('click', function(event) {
+            if(timer.getTime() < previousBestTime){
+                bestTime = previousBestTime;
+                previousBestTime = bestTime;
+                setBestTime(bestTime);
+            } 
             results.pop();
             renderResultList();
             setAverageTime();
@@ -130,8 +134,11 @@ function startTimer(){
         diffTime = bestTime - currentTime.value;
 
         if (currentTime.value < bestTime){
+            previousBestTime = bestTime;
             bestTime = currentTime.value;
             setBestTime(bestTime);
+        }else{
+            previousBestTime = bestTime;
         }
 
         results.push(currentTime.value);
