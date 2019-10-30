@@ -45,11 +45,15 @@ body{
     justify-content: center;
     align-items: center;
 }
+.portfolio__item_title{
+    font-size: 2rem;
+}
 .portfolio__item_text{
     max-width: 600px;
     width: 100%;
     line-height: 1.8;
     text-align: center;
+    font-size: 1.2rem;
 }
 .portfolio__image{
     object-fit: cover;  
