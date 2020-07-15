@@ -145,7 +145,7 @@ function progressBar(element, options){
   let width = 0;
   let timer = setInterval(()=>{
    if(width>=options.width){
-     timer.clearInterval();
+     clearInterval(timer);
    }
    progress.style.width = width + '%';
    width+=widthPerFrame;
