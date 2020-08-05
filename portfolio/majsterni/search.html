@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <title>Search page</title>
+    <link href="./styles/main.2dc0d602e29fd743ed2f.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header header_dark">
+      <div class="wrapper header__inner">
+        <div class="menu">
+          <a class="menu__btn"
+            ><div class="menu__burger"></div>
+            <div class="menu__title">МЕНЮ</div></a
+          >
+        </div>
+        <a href="" class="lang">EN</a>
+        <div class="header__search">
+          <div class="search">
+            <input class="search__input" placeholder="ПОИСК" value="" autocomplete="off" />
+            <button class="search__button_close"></button>
+          </div>
+          <div class="search__results">
+            <div class="search__result search__result_not-found">Nothing found on your request</div>
+          </div>
+        </div>
+        <div class="header__logo">
+          <a href="/" class="logo"><img src="images/logo_dark.svg" alt="logo" /></a>
+        </div>
+        <div class="header__phone"><a href="tel:+375292678134" class="phone">+375 29 267 81 34</a></div>
+        <div class="header__request">
+          <a href="#" class="request"><span class="requset__text">ОСТАВИТЬ ЗАПРОС</span></a>
+        </div>
+      </div>
+      <div class="header-menu">
+        <nav class="header-menu__navigation">
+          <ul class="header-menu__list">
+            <li class="header-menu__item">
+              <a href="architecture.html" class="header-menu__link">Архитектура</a
+              ><span class="header-menu__separator"></span>
+            </li>
+            <li class="header-menu__item">
+              <a href="interior-design.html" class="header-menu__link">Дизайн интерьера</a
+              ><span class="header-menu__separator"></span>
+            </li>
+            <li class="header-menu__item"><a href="technologies.html" class="header-menu__link">Технологии</a></li>
+            <li class="header-menu__item">
+              <a href="community.html" class="header-menu__link">Комьюнити</a
+              ><span class="header-menu__separator"></span>
+            </li>
+            <li class="header-menu__item">
+              <a href="about.html" class="header-menu__link">О нас</a><span class="header-menu__separator"></span>
+            </li>
+            <li class="header-menu__item"><a href="contacts.html" class="header-menu__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <span class="header-menu__label label">(избранные проекты)</span>
+        <div class="header-menu__projects">
+          <a href="#" class="header-menu__project"
+            ><div class="article article_small">
+              <div class="article__image"><img src="images/articles/1.png" alt="image" /></div>
+              <div class="article__inner">
+                <div class="article__footer"><div class="article__title">Частная клиника</div></div>
+              </div>
+            </div></a
+          ><a href="#" class="header-menu__project"
+            ><div class="article article_small">
+              <div class="article__image"><img src="images/articles/2.png" alt="image" /></div>
+              <div class="article__inner">
+                <div class="article__footer"><div class="article__title">Частная клиника</div></div>
+              </div>
+            </div></a
+          ><a href="#" class="header-menu__project"
+            ><div class="article article_small">
+              <div class="article__image"><img src="images/articles/3.png" alt="image" /></div>
+              <div class="article__inner">
+                <div class="article__footer"><div class="article__title">Частная клиника</div></div>
+              </div>
+            </div></a
+          >
+        </div>
+        <div class="header-menu__socials">
+          <ul class="socials socials_space-between">
+            <li class="socials__item"><a href="" class="socials__link">UPWORK</a></li>
+            <li class="socials__item"><a href="" class="socials__link">LINKEDIN</a></li>
+            <li class="socials__item"><a href="" class="socials__link">FACEBOOK</a></li>
+            <li class="socials__item"><a href="" class="socials__link">INSTAGRAM</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="search-page">
+      <div class="content-page__first-screen search-page__first-screen">
+        <div class="wrapper">
+          <div class="content-page__info search-page__info">
+            <h2 class="content-page__title search-page__title">
+              Поиск по ”<span class="search-page__search">АРХИТЕК</span> ”
+            </h2>
+            <p class="content-page__description search-page__description">
+              <span class="description description_size_lg"
+                >Всего найдено <span class="search-page_search-counts">11</span> результатов</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="search-page__tabs">
+        <div class="wrapper">
+          <div class="tabs">
+            <button class="tab tab_active" data-target="projects">
+              <span class="label label_dark"><span class="search-page__projects-count">2</span> проекта</span>
+            </button>
+            <button class="tab" data-target="articles">
+              <span class="label label_dark"><span class="search-page__articles-count">9</span> статей</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="search-page__results-container">
+        <section class="search-page__results" data-results-name="projects">
+          <div class="wrapper">
+            <h2 class="search-page__results-title">
+              Проекты<span class="label label_dark search-page__results-index"
+                >(<span class="js-search-index">2</span>)</span
+              >
+            </h2>
+            <div class="medias medias_jc_start">
+              <a href="#" class="media media_white"
+                ><div class="media__image"><img src="images/slides/2.png" alt="image" /></div>
+                <div class="media__date"><span class="label label_dark">(2020 – Локация)</span></div>
+                <h5 class="media__title">Частная клиника</h5></a
+              ><a href="#" class="media media_white"
+                ><div class="media__image"><img src="images/slides/3.png" alt="image" /></div>
+                <div class="media__date"><span class="label label_dark">(2020 – Локация)</span></div>
+                <h5 class="media__title">Национальная библиотека в Сиднее</h5></a
+              >
+            </div>
+          </div>
+        </section>
+        <section class="search-page__results" data-results-name="articles">
+          <div class="wrapper">
+            <h2 class="search-page__results-title">
+              Статьи<span class="label label_dark search-page__results-index"
+                >(<span class="js-search-index">9</span>)</span
+              >
+            </h2>
+            <div class="medias medias_jc_start">
+              <a href="#" class="media media_white"
+                ><div class="media__image"><img src="images/slides/2.png" alt="image" /></div>
+                <div class="media__date"><span class="label label_dark">(22.05.2020 – медиа)</span></div>
+                <h5 class="media__title">Создать свое архитектурное бюро</h5></a
+              ><a href="#" class="media media_white"
+                ><div class="media__image"><img src="images/slides/3.png" alt="image" /></div>
+                <div class="media__date"><span class="label label_dark">(22.05.2020 – ивенты)</span></div>
+                <h5 class="media__title">Архитектурная лекция</h5></a
+              ><a href="#" class="media media_white"
+                ><div class="media__image"><img src="images/slides/2.png" alt="image" /></div>
+                <div class="media__date"><span class="label label_dark">(22.05.2020 – блог)</span></div>
+                <h5 class="media__title">Архитектура как вид искусства</h5></a
+              ><a href="#" class="media media_white"
+                ><div class="media__image"><img src="images/slides/3.png" alt="image" /></div>
+                <div class="media__date"><span class="label label_dark">(22.05.2020 – блог)</span></div>
+                <h5 class="media__title">Архитектура как вид искусства</h5></a
+              ><a href="#" class="media media_white"
+                ><div class="media__image"><img src="images/slides/2.png" alt="image" /></div>
+                <div class="media__date"><span class="label label_dark">(22.05.2020 – медиа)</span></div>
+                <h5 class="media__title">Создать свое архитектурное бюро</h5></a
+              ><a href="#" class="media media_white"
+                ><div class="media__image"><img src="images/slides/3.png" alt="image" /></div>
+                <div class="media__date"><span class="label label_dark">(22.05.2020 – ивенты)</span></div>
+                <h5 class="media__title">Архитектурная лекция</h5></a
+              ><a href="#" class="media media_white"
+                ><div class="media__image"><img src="images/slides/2.png" alt="image" /></div>
+                <div class="media__date"><span class="label label_dark">(22.05.2020 – ивенты)</span></div>
+                <h5 class="media__title">Архитектурная лекция</h5></a
+              ><a href="#" class="media media_white"
+                ><div class="media__image"><img src="images/slides/3.png" alt="image" /></div>
+                <div class="media__date"><span class="label label_dark">(22.05.2020 – медиа)</span></div>
+                <h5 class="media__title">Архитектура как вид искусства</h5></a
+              ><a href="#" class="media media_white"
+                ><div class="media__image"><img src="images/slides/3.png" alt="image" /></div>
+                <div class="media__date"><span class="label label_dark">(22.05.2020 – блог)</span></div>
+                <h5 class="media__title">Создать свое архитектурное бюро</h5></a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer footer_light">
+      <div class="wrapper">
+        <div class="footer__socials">
+          <div class="container container_align_center">
+            <ul class="socials socials_dark socials_space-between">
+              <li class="socials__item"><a href="" class="socials__link">UPWORK</a></li>
+              <li class="socials__item"><a href="" class="socials__link">LINKEDIN</a></li>
+              <li class="socials__item"><a href="" class="socials__link">FACEBOOK</a></li>
+              <li class="socials__item"><a href="" class="socials__link">INSTAGRAM</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__privacy">
+          <div class="container container_space_btw container_align_center">
+            <div class="container__col">
+              <p class="description footer__link_description">Majsterni 2020. All Rights Reserved</p>
+            </div>
+            <div class="container__col"><a href="" class="description footer__link_description">Privacy policy</a></div>
+            <div class="container__col">
+              <a href="https://thefirstthelast.agency" class="logo_tftl" target="_blank"
+                ><img src="images/TFTL_logo_dark.svg" alt="the first the last logo"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/main.2dc0d602e29fd743ed2f.js"></script>
+  </body>
+</html>
